@@ -98,7 +98,7 @@ export default function Home() {
           </div>
 
           {/* Social links */}
-          <div className="flex justify-center space-x-6 pt-8">
+          <div className="flex justify-center space-x-6 pt-8 pb-16">
             {[
               { href: "#", icon: Github, label: "GitHub" },
               { href: "#", icon: Linkedin, label: "LinkedIn" },
@@ -119,13 +119,14 @@ export default function Home() {
               </a>
             ))}
           </div>
+        </div>
 
-          <div
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10"
-            style={{ animationDuration: "2s" }}
-          >
-            <ArrowDown className="w-5 h-5 text-muted-foreground" />
-          </div>
+        {/* Arrow moved outside main container */}
+        <div
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-50"
+          style={{ animationDuration: "2s" }}
+        >
+          <ArrowDown className="w-5 h-5 text-muted-foreground" />
         </div>
       </section>
 
