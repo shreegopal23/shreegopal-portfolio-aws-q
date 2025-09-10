@@ -245,7 +245,7 @@ export function SkillsSection() {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 text-secondary-foreground text-sm font-medium mb-6">
             <Award className="w-4 h-4" />
             Certifications & Learning
@@ -279,7 +279,7 @@ export function SkillsSection() {
               Always exploring new tools and methodologies to improve efficiency and reliability.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )
