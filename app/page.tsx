@@ -95,14 +95,26 @@ export default function Home() {
                 Get In Touch
               </a>
             </Button>
+
+            <Button
+              variant="outline"
+              size="lg"
+              asChild
+              className="px-8 py-3 text-base font-medium border-primary/30 hover:bg-primary/10 hover:border-primary/50 transition-all duration-200 bg-transparent focus:ring-2 focus:ring-primary/50"
+            >
+              <a href="/Shreegopal_resume.pdf" download="Shreegopal_resume.pdf">
+                <Download className="w-4 h-4 mr-2" />
+                Download Resume
+              </a>
+            </Button>
           </div>
 
           {/* Social links */}
           <div className="flex justify-center space-x-6 pt-8 pb-16">
             {[
               { href: "#", icon: Github, label: "GitHub" },
-              { href: "https://www.linkedin.com/in/shreegopal", icon: Linkedin, label: "LinkedIn" },
-              { href: "#", icon: Download, label: "Download Resume" },
+              { href: "https://www.linkedin.com/in/shreegopal-dadhich", icon: Linkedin, label: "LinkedIn" },
+              { href: "mailto:shreegopal2390@gmail.com", icon: Mail, label: "Email" },
             ].map(({ href, icon: Icon, label }, index) => (
               <a
                 key={label}
@@ -120,15 +132,14 @@ export default function Home() {
             ))}
           </div>
         </div>
-
-        {/* Arrow moved outside main container */}
-        <div
-          className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce z-50"
-          style={{ animationDuration: "2s" }}
-        >
-          <ArrowDown className="w-5 h-5 text-muted-foreground" />
-        </div>
       </section>
+
+      {/* Arrow moved outside section for better visibility */}
+      <div className="relative -mt-16 flex justify-center z-10">
+        <div className="animate-bounce bg-background/80 backdrop-blur-sm rounded-full p-3 border border-border/50 shadow-lg">
+          <ArrowDown className="w-6 h-6 text-primary" />
+        </div>
+      </div>
 
       <ExperienceTimeline />
       <SkillsSection />
