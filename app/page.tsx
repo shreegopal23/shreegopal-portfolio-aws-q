@@ -3,7 +3,8 @@
 import { Navigation } from "@/components/navigation"
 import { ExperienceTimeline } from "@/components/experience-timeline"
 import { SkillsSection } from "@/components/skills-section"
-import { BlogsSection } from "@/components/blogs-section"
+// import { BlogsSection } from "@/components/blogs-section"
+import { CertificationsSection } from "@/components/certifications-section"
 import { ConnectSection } from "@/components/connect-section"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -143,7 +144,8 @@ export default function Home() {
 
       <ExperienceTimeline />
       <SkillsSection />
-      <BlogsSection />
+      <CertificationsSection />
+      {/* <BlogsSection /> */}
       <ConnectSection />
       <Footer />
     </main>

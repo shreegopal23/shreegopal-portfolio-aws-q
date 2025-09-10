@@ -105,7 +105,7 @@ export function ConnectSection() {
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-balance">Let's Connect</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
-            Ready to discuss your next DevOps project or explore collaboration opportunities? I'd love to hear from you.
+            I’m always open to meaningful discussions around Cloud, DevOps, and technology trends. Feel free to connect with me to exchange ideas or insights.
           </p>
         </div>
 
