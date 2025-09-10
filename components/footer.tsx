@@ -7,7 +7,7 @@ export function Footer() {
     { name: "GitHub", icon: <Github className="w-5 h-5" />, href: "https://github.com" },
     { name: "LinkedIn", icon: <Linkedin className="w-5 h-5" />, href: "https://linkedin.com" },
     { name: "Twitter", icon: <Twitter className="w-5 h-5" />, href: "https://twitter.com" },
-    { name: "Email", icon: <Mail className="w-5 h-5" />, href: "mailto:devops@example.com" },
+    { name: "Email", icon: <Mail className="w-5 h-5" />, href: "mailto:shreegopal2390@gmail.com" },
   ]
 
   const quickLinks = [
@@ -68,12 +68,12 @@ export function Footer() {
             <h3 className="font-semibold">Get In Touch</h3>
             <div className="space-y-2 text-sm">
               <p className="text-muted-foreground">
-                <a href="mailto:devops@example.com" className="hover:text-primary transition-colors">
-                  devops@example.com
+                <a href="mailto:shreegopal2390@gmail.com" className="hover:text-primary transition-colors">
+                  shreegopal2390@gmail.com
                 </a>
               </p>
-              <p className="text-muted-foreground">San Francisco, CA</p>
-              <p className="text-muted-foreground">Available for new opportunities</p>
+              <p className="text-muted-foreground">Surat, India</p>
+              {/* <p className="text-muted-foreground">Available for new opportunities</p> */}
             </div>
           </div>
         </div>
@@ -82,7 +82,7 @@ export function Footer() {
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-muted-foreground text-sm">© {currentYear} DevOps Engineer. All rights reserved.</p>
           <p className="text-muted-foreground text-sm flex items-center gap-1">
-            Built with <Heart className="w-4 h-4 text-red-500" /> using Next.js & Tailwind CSS
+            Built with <Heart className="w-4 h-4 text-red-500" /> 
           </p>
         </div>
       </div>

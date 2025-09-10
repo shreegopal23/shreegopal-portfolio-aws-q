@@ -54,7 +54,7 @@ export function ConnectSection() {
     {
       name: "LinkedIn",
       icon: <Linkedin className="w-6 h-6" />,
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/shreegopal-dadhich",
       color: "hover:text-blue-600",
     },
     {
@@ -66,7 +66,7 @@ export function ConnectSection() {
     {
       name: "Email",
       icon: <Mail className="w-6 h-6" />,
-      href: "mailto:devops@example.com",
+      href: "mailto:shreegopal2390@gmail.com",
       color: "hover:text-red-500",
     },
   ]
@@ -75,27 +75,27 @@ export function ConnectSection() {
     {
       icon: <Mail className="w-5 h-5" />,
       label: "Email",
-      value: "devops@example.com",
-      href: "mailto:devops@example.com",
+      value: "shreegopal2390@gmail.com",
+      href: "mailto:shreegopal2390@gmail.com",
     },
     {
       icon: <Phone className="w-5 h-5" />,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "+917878532491",
+      href: "tel:+917878532491",
     },
     {
       icon: <MapPin className="w-5 h-5" />,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Surat, India",
       href: "#",
     },
-    {
-      icon: <Calendar className="w-5 h-5" />,
-      label: "Availability",
-      value: "Open to opportunities",
-      href: "#",
-    },
+    // {
+    //   icon: <Calendar className="w-5 h-5" />,
+    //   label: "Availability",
+    //   value: "Open to opportunities",
+    //   href: "#",
+    // },
   ]
 
   return (
@@ -261,22 +261,22 @@ export function ConnectSection() {
               </CardContent>
             </Card>
 
-            <Card className="shadow-lg border-border/50 border-green-500/20">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-4">
+            {/* <Card className="shadow-lg border-border/50 border-green-500/20"> */}
+              {/* <CardContent className="p-6"> */}
+                {/* <div className="flex items-center gap-4">
                   <div className="relative">
                     <div className="w-3 h-3 bg-green-500 rounded-full" />
                     <div className="absolute inset-0 w-3 h-3 bg-green-500 rounded-full animate-ping opacity-75" />
                   </div>
                   <div>
-                    <p className="font-semibold text-green-600">Available for New Projects</p>
+                    <p className="text-muted-foreground">Let's discuss your project</p>
                     <p className="text-sm text-muted-foreground">
                       Currently accepting new DevOps consulting and full-time opportunities
                     </p>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                </div> */}
+              {/* </CardContent> */}
+            {/* </Card> */}
           </div>
         </div>
 
@@ -289,13 +289,13 @@ export function ConnectSection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" asChild>
-              <a href="mailto:devops@example.com">
+              <a href="mailto:shreegopal2390@gmail.com">
                 <Mail className="w-4 h-4 mr-2" />
                 Start a Conversation
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <a href="#" download>
+              <a href="/Shreegopal_resume.pdf" download="Shreegopal_resume.pdf">
                 Download Resume
               </a>
             </Button>

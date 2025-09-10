@@ -103,7 +103,7 @@ export function Navigation() {
               className="hover:text-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50 rounded-sm"
               aria-label="Go to home section"
             >
-              Shreegopal<span className="text-primary">.</span>
+              DevOps<span className="text-primary">.</span>
             </button>
           </div>
 
