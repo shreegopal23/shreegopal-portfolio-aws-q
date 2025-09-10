@@ -72,7 +72,7 @@ export function Footer() {
                   devops@example.com
                 </a>
               </p>
-              <p className="text-muted-foreground">San Francisco, CA</p>
+              <p className="text-muted-foreground">Surat, India</p>
               <p className="text-muted-foreground">Available for new opportunities</p>
             </div>
           </div>

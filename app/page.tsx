@@ -22,7 +22,7 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Navigation />
 
-      <section id="home" className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+      <section id="home" className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden py-20">
         {/* Background gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20 pointer-events-none" />
 
@@ -51,13 +51,13 @@ export default function Home() {
             </div>
 
             <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto text-balance leading-relaxed">
-              Architecting scalable cloud infrastructure, automating CI/CD pipelines, and enabling teams to deploy with
-              confidence
+              AWS Cloud & DevOps Engineer with 2+ years experience managing scalable infrastructure for 10M+ users with 99.99% uptime
+
             </p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
-            {["AWS", "Kubernetes", "Docker", "Terraform", "Jenkins", "Monitoring"].map((tech, index) => (
+            {["AWS", "Docker", "Kubernetes", "Terraform", "GitLab CI/CD", "CloudFormation"].map((tech, index) => (
               <Badge
                 key={tech}
                 variant="outline"
@@ -101,7 +101,7 @@ export default function Home() {
           <div className="flex justify-center space-x-6 pt-8 pb-16">
             {[
               { href: "#", icon: Github, label: "GitHub" },
-              { href: "#", icon: Linkedin, label: "LinkedIn" },
+              { href: "https://www.linkedin.com/in/shreegopal", icon: Linkedin, label: "LinkedIn" },
               { href: "#", icon: Download, label: "Download Resume" },
             ].map(({ href, icon: Icon, label }, index) => (
               <a
@@ -123,7 +123,7 @@ export default function Home() {
 
         {/* Arrow moved outside main container */}
         <div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-50"
+          className="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce z-50"
           style={{ animationDuration: "2s" }}
         >
           <ArrowDown className="w-5 h-5 text-muted-foreground" />

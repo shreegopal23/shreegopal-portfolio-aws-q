@@ -75,19 +75,19 @@ export function ConnectSection() {
     {
       icon: <Mail className="w-5 h-5" />,
       label: "Email",
-      value: "devops@example.com",
+      value: "shreegopal2390@gmail.com",
       href: "mailto:devops@example.com",
     },
     {
       icon: <Phone className="w-5 h-5" />,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "+917878532491",
+      href: "tel:+917878532491",
     },
     {
       icon: <MapPin className="w-5 h-5" />,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Surat, India",
       href: "#",
     },
     {

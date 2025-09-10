@@ -15,12 +15,12 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    company: "TechCorp Solutions",
-    role: "Senior DevOps Engineer",
-    duration: "2022 - Present",
-    location: "San Francisco, CA",
+    company: "Logicwind Technologies",
+    role: "DevOps Engineer",
+    duration: "July 2025 - Present",
+    location: "Surat, India",
     description:
-      "Leading infrastructure automation and cloud migration initiatives for a high-growth SaaS platform serving 100K+ users.",
+      "Designing, deploying, and managing scalable, secure, and fault-tolerant cloud infrastructure for high-traffic applications with 10M+ active users.",
     achievements: [
       "Reduced deployment time by 75% through CI/CD pipeline optimization",
       "Architected multi-region AWS infrastructure supporting 99.9% uptime",
