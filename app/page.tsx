@@ -45,7 +45,7 @@ export default function Home() {
               <p className="text-lg md:text-xl text-muted-foreground font-medium tracking-wide">Hello, I'm</p>
               <div className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-balance">
                 <span className="bg-gradient-to-br from-foreground to-foreground/70 bg-clip-text text-transparent">
-                  Shreegopal Dadhiich
+                  Shreegopal Dadhich
                 </span>
               </div>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-primary mt-4">DevOps Engineer</h2>
