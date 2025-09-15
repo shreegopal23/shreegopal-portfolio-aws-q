@@ -31,6 +31,8 @@ export default function BlogPage({ params }: BlogPageProps) {
     notFound()
   }
 
+  const shareUrl = typeof window !== 'undefined' ? window.location.href : `https://yoursite.com/blogs/${params.slug}`
+
   return (
     <main className="min-h-screen bg-background">
       <Navigation />
@@ -111,14 +113,16 @@ export default function BlogPage({ params }: BlogPageProps) {
                 </p>
               </div>
               <div className="flex gap-2">
-                <Button variant="outline" size="sm">
-                  <Share2 className="w-4 h-4 mr-2" />
-                  Share on LinkedIn
-                </Button>
-                <Button variant="outline" size="sm">
-                  <Share2 className="w-4 h-4 mr-2" />
-                  Share on Twitter
-                </Button>
+                <a
+                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline" size="sm">
+                    <Share2 className="w-4 h-4 mr-2" />
+                    Share on LinkedIn
+                  </Button>
+                </a>
               </div>
             </div>
           </footer>

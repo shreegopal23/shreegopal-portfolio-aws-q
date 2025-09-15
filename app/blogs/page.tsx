@@ -5,8 +5,9 @@ import { Badge } from "@/components/ui/badge"
 import { Calendar, Clock, ArrowRight, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import { blogPosts } from "@/lib/blog-posts"
+import { DevOpsLoader } from "@/components/devops-loader"
 
-const categories = ["All", "Database", "Kubernetes", "Infrastructure", "Monitoring", "Security", "Docker", "AWS"]
+const categories = ["All", "Database", "DevOps", "Infrastructure", "AWS", "Docker", "Kubernetes"]
 
 export default function BlogsPage() {
   return (
@@ -24,10 +25,15 @@ export default function BlogsPage() {
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home
             </Link>
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-balance">All Blog Posts</h1>
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-balance">Technical Blog</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
-              Deep dives into DevOps, cloud infrastructure, databases, and automation
+              In-depth guides on DevOps, cloud infrastructure, and modern development practices
             </p>
+            <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground mt-6">
+              <span>{blogPosts.length} Article{blogPosts.length !== 1 ? 's' : ''}</span>
+              <span>•</span>
+              <span>Updated regularly</span>
+            </div>
           </div>
 
           {/* Category filters */}
@@ -52,7 +58,7 @@ export default function BlogsPage() {
             {blogPosts.map((post, index) => (
               <Link key={post.id} href={`/blogs/${post.slug}`}>
                 <Card
-                  className="group hover:shadow-lg transition-all duration-300 hover:scale-[1.02] cursor-pointer h-full"
+                  className="group hover:shadow-lg transition-all duration-300 hover:scale-[1.02] cursor-pointer h-full border-border/50"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <CardHeader className="p-0">
@@ -63,10 +69,17 @@ export default function BlogsPage() {
                         className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute top-4 left-4">
-                        <Badge variant="secondary" className="bg-background/90 text-foreground">
+                        <Badge variant="secondary" className="bg-background/90 text-foreground shadow-sm">
                           {post.category}
                         </Badge>
                       </div>
+                      {post.featured && (
+                        <div className="absolute top-4 right-4">
+                          <Badge className="bg-primary text-primary-foreground shadow-sm">
+                            Featured
+                          </Badge>
+                        </div>
+                      )}
                     </div>
                   </CardHeader>
                   <CardContent className="p-6 flex flex-col h-full">
@@ -90,7 +103,7 @@ export default function BlogsPage() {
                     <p className="text-muted-foreground mb-4 leading-relaxed line-clamp-3 flex-grow">
                       {post.description}
                     </p>
-                    <div className="flex items-center justify-between mt-auto">
+                    <div className="flex items-center justify-between mt-auto pt-4 border-t border-border/50">
                       <span className="text-sm font-medium text-primary group-hover:underline">Read Article</span>
                       <ArrowRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" />
                     </div>
@@ -99,6 +112,17 @@ export default function BlogsPage() {
               </Link>
             ))}
           </div>
+
+          {/* Empty state for future blogs */}
+          {blogPosts.length === 1 && (
+            <div className="text-center mt-16 p-8 border border-dashed border-border rounded-lg">
+              <DevOpsLoader />
+              <p className="text-muted-foreground mb-2 mt-4">More articles coming soon!</p>
+              <p className="text-sm text-muted-foreground">
+                Stay tuned for more in-depth technical guides and tutorials.
+              </p>
+            </div>
+          )}
         </div>
       </section>
 
