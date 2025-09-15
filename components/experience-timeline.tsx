@@ -87,58 +87,54 @@ export function ExperienceTimeline() {
 
         {/* Timeline */}
         <div className="relative">
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/30 via-primary/60 to-primary/30 md:transform md:-translate-x-px" />
+          {/* Timeline line - hidden on mobile, visible on desktop */}
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/30 via-primary/60 to-primary/30 transform -translate-x-px" />
 
-          <div className="space-y-12">
+          <div className="space-y-8 md:space-y-12">
             {experiences.map((experience, index) => (
-              <div
-                key={index}
-                className={`relative flex items-start ${
-                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                } flex-col md:items-center group`}
-              >
-                {/* Timeline dot */}
-                <div className="absolute left-6 md:left-1/2 w-6 h-6 bg-gradient-to-r from-primary to-primary/80 rounded-full border-4 border-background shadow-lg ring-4 ring-primary/20 md:transform md:-translate-x-3 z-10 group-hover:ring-primary/40 transition-all duration-300">
+              <div key={index} className="relative">
+                {/* Timeline dot - only visible on desktop */}
+                <div className="hidden md:block absolute left-1/2 top-8 w-6 h-6 bg-gradient-to-r from-primary to-primary/80 rounded-full border-4 border-background shadow-lg ring-4 ring-primary/20 transform -translate-x-3 z-10 group-hover:ring-primary/40 transition-all duration-300">
                   <div className="absolute inset-0 rounded-full bg-primary animate-ping opacity-20" />
                 </div>
 
-                {/* Content card */}
-                <div className={`w-full md:w-1/2 ml-16 md:ml-0 ${index % 2 === 0 ? "md:pr-8" : "md:pl-8"}`}>
+                {/* Content card - full width on mobile, alternating on desktop */}
+                <div className={`w-full ${index % 2 === 0 ? "md:w-1/2 md:pr-8" : "md:w-1/2 md:ml-auto md:pl-8"}`}>
                   <Card className="group/card hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] border-border/40 bg-card/90 backdrop-blur-md hover:bg-card relative overflow-hidden">
                     {/* Card gradient overlay */}
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500" />
                     
-                    <CardContent className="p-6 relative">
+                    <CardContent className="p-4 md:p-6 relative">
                       {/* Company header */}
                       <div className="flex items-start gap-3 mb-4">
-                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 border border-primary/30 flex items-center justify-center group-hover/card:scale-110 transition-transform duration-300">
-                          <Building2 className="w-6 h-6 text-primary" />
+                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 border border-primary/30 flex items-center justify-center group-hover/card:scale-110 transition-transform duration-300 flex-shrink-0">
+                          <Building2 className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                         </div>
-                        <div className="flex-1">
-                          <h3 className="text-xl font-bold text-foreground group-hover/card:text-primary transition-colors duration-300">
+                        <div className="flex-1 min-w-0">
+                          <h3 className="text-lg md:text-xl font-bold text-foreground group-hover/card:text-primary transition-colors duration-300 leading-tight">
                             {experience.role}
                           </h3>
-                          <p className="text-lg font-semibold text-primary/90 mb-2">{experience.company}</p>
-                          <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+                          <p className="text-base md:text-lg font-semibold text-primary/90 mb-2 leading-tight">{experience.company}</p>
+                          <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-2 sm:gap-4 text-sm text-muted-foreground">
                             <div className="flex items-center gap-2 bg-muted/50 px-2 py-1 rounded-full">
-                              <Calendar className="w-3 h-3" />
-                              {experience.duration}
+                              <Calendar className="w-3 h-3 flex-shrink-0" />
+                              <span className="whitespace-nowrap">{experience.duration}</span>
                             </div>
                             <div className="flex items-center gap-2 bg-muted/50 px-2 py-1 rounded-full">
-                              <MapPin className="w-3 h-3" />
-                              {experience.location}
+                              <MapPin className="w-3 h-3 flex-shrink-0" />
+                              <span className="whitespace-nowrap">{experience.location}</span>
                             </div>
                           </div>
                         </div>
                       </div>
 
                       {/* Description */}
-                      <p className="text-muted-foreground mb-4 leading-relaxed">{experience.description}</p>
+                      <p className="text-muted-foreground mb-4 leading-relaxed text-sm md:text-base">{experience.description}</p>
 
                       {/* Key achievements - show only first 2 */}
                       <div className="mb-4">
                         <div className="flex items-center gap-2 mb-3">
-                          <Trophy className="w-4 h-4 text-primary" />
+                          <Trophy className="w-4 h-4 text-primary flex-shrink-0" />
                           <h4 className="font-semibold text-foreground text-sm">Key Achievements</h4>
                         </div>
                         <ul className="space-y-2">
@@ -152,8 +148,8 @@ export function ExperienceTimeline() {
                       </div>
 
                       {/* Technologies */}
-                      <div className="flex flex-wrap gap-2">
-                        {experience.technologies.map((tech, techIndex) => (
+                      <div className="flex flex-wrap gap-1.5 md:gap-2">
+                        {experience.technologies.map((tech) => (
                           <Badge
                             key={tech}
                             variant="secondary"
