@@ -19,14 +19,14 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: "1",
-    title: "Building Resilient Kubernetes Clusters: A Production Guide",
+    title: "Setting Up Redis Cluster on AWS EC2 with Docker Compose: A Complete Guide",
     description:
-      "Learn how to design and implement highly available Kubernetes clusters that can withstand failures and scale seamlessly in production environments.",
-    thumbnail: "/placeholder.svg?height=240&width=400&text=Kubernetes+Architecture",
-    category: "Kubernetes",
-    readTime: "8 min read",
-    publishDate: "2024-01-15",
-    slug: "resilient-kubernetes-clusters",
+      "Learn how to set up a highly available Redis cluster on AWS EC2 using Docker Compose. Complete with configuration files, security setup, and production considerations.",
+    thumbnail: "/placeholder.svg?height=240&width=400&text=Redis+Cluster+AWS",
+    category: "Database",
+    readTime: "15 min read",
+    publishDate: "2024-09-15",
+    slug: "redis-cluster-aws-setup",
     featured: true,
   },
   {
@@ -48,6 +48,43 @@ const blogPosts: BlogPost[] = [
     thumbnail: "/placeholder.svg?height=240&width=400&text=Monitoring+Dashboard",
     category: "Monitoring",
     readTime: "10 min read",
+    publishDate: "2024-01-02",
+    slug: "monitoring-microservices",
+  },
+  {
+    id: "4",
+    title: "CI/CD Pipeline Security: Protecting Your Deployments",
+    description:
+      "Essential security practices for CI/CD pipelines, including secret management, vulnerability scanning, and secure deployment strategies.",
+    thumbnail: "/placeholder.svg?height=240&width=400&text=Security+Pipeline",
+    category: "Security",
+    readTime: "7 min read",
+    publishDate: "2023-12-28",
+    slug: "cicd-security",
+  },
+  {
+    id: "5",
+    title: "Docker Multi-Stage Builds: Optimizing Container Images",
+    description:
+      "Master Docker multi-stage builds to create smaller, more secure container images while maintaining development flexibility.",
+    thumbnail: "/placeholder.svg?height=240&width=400&text=Docker+Optimization",
+    category: "Docker",
+    readTime: "5 min read",
+    publishDate: "2023-12-20",
+    slug: "docker-multi-stage-builds",
+  },
+  {
+    id: "6",
+    title: "AWS Cost Optimization: Strategies That Actually Work",
+    description:
+      "Practical approaches to reducing AWS costs without compromising performance, including rightsizing, reserved instances, and automation.",
+    thumbnail: "/placeholder.svg?height=240&width=400&text=AWS+Cost+Optimization",
+    category: "Cloud",
+    readTime: "9 min read",
+    publishDate: "2023-12-15",
+    slug: "aws-cost-optimization",
+  },
+]
     publishDate: "2024-01-02",
     slug: "monitoring-microservices",
   },
