@@ -54,7 +54,7 @@ export default function BlogsPage() {
           </div>
 
           {/* Blog posts grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
             {blogPosts.map((post, index) => (
               <Link key={post.id} href={`/blogs/${post.slug}`}>
                 <Card
@@ -66,46 +66,48 @@ export default function BlogsPage() {
                       <img
                         src={post.thumbnail || "/placeholder.svg"}
                         alt={post.title}
-                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-40 md:h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                       />
-                      <div className="absolute top-4 left-4">
-                        <Badge variant="secondary" className="bg-background/90 text-foreground shadow-sm">
+                      <div className="absolute top-3 left-3 md:top-4 md:left-4">
+                        <Badge variant="secondary" className="bg-background/90 text-foreground shadow-sm text-xs">
                           {post.category}
                         </Badge>
                       </div>
                       {post.featured && (
-                        <div className="absolute top-4 right-4">
-                          <Badge className="bg-primary text-primary-foreground shadow-sm">
+                        <div className="absolute top-3 right-3 md:top-4 md:right-4">
+                          <Badge className="bg-primary text-primary-foreground shadow-sm text-xs">
                             Featured
                           </Badge>
                         </div>
                       )}
                     </div>
                   </CardHeader>
-                  <CardContent className="p-6 flex flex-col h-full">
-                    <div className="flex items-center gap-4 mb-3 text-sm text-muted-foreground">
+                  <CardContent className="p-4 md:p-6 flex flex-col h-full">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3 text-xs md:text-sm text-muted-foreground">
                       <div className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        {new Date(post.publishDate).toLocaleDateString("en-US", {
-                          month: "short",
-                          day: "numeric",
-                          year: "numeric",
-                        })}
+                        <Calendar className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" />
+                        <span className="whitespace-nowrap">
+                          {new Date(post.publishDate).toLocaleDateString("en-US", {
+                            month: "short",
+                            day: "numeric",
+                            year: "numeric",
+                          })}
+                        </span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        {post.readTime}
+                        <Clock className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" />
+                        <span className="whitespace-nowrap">{post.readTime}</span>
                       </div>
                     </div>
-                    <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors line-clamp-2 flex-grow">
+                    <h3 className="text-lg md:text-xl font-semibold mb-3 group-hover:text-primary transition-colors line-clamp-2 flex-grow leading-tight">
                       {post.title}
                     </h3>
-                    <p className="text-muted-foreground mb-4 leading-relaxed line-clamp-3 flex-grow">
+                    <p className="text-muted-foreground mb-4 leading-relaxed line-clamp-3 flex-grow text-sm md:text-base">
                       {post.description}
                     </p>
-                    <div className="flex items-center justify-between mt-auto pt-4 border-t border-border/50">
-                      <span className="text-sm font-medium text-primary group-hover:underline">Read Article</span>
-                      <ArrowRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" />
+                    <div className="flex items-center justify-between mt-auto pt-3 md:pt-4 border-t border-border/50">
+                      <span className="text-xs md:text-sm font-medium text-primary group-hover:underline">Read Article</span>
+                      <ArrowRight className="w-3 h-3 md:w-4 md:h-4 text-primary group-hover:translate-x-1 transition-transform flex-shrink-0" />
                     </div>
                   </CardContent>
                 </Card>
