@@ -4,123 +4,9 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, Clock, ArrowRight, ArrowLeft } from "lucide-react"
 import Link from "next/link"
+import { blogPosts } from "@/lib/blog-posts"
 
-interface BlogPost {
-  id: string
-  title: string
-  description: string
-  thumbnail: string
-  category: string
-  readTime: string
-  publishDate: string
-  slug: string
-  featured?: boolean
-}
-
-const allBlogPosts: BlogPost[] = [
-  {
-    id: "1",
-    title: "Building Resilient Kubernetes Clusters: A Production Guide",
-    description:
-      "Learn how to design and implement highly available Kubernetes clusters that can withstand failures and scale seamlessly in production environments.",
-    thumbnail: "/placeholder.svg?height=240&width=400&text=Kubernetes+Architecture",
-    category: "Kubernetes",
-    readTime: "8 min read",
-    publishDate: "2024-01-15",
-    slug: "resilient-kubernetes-clusters",
-    featured: true,
-  },
-  {
-    id: "2",
-    title: "Redis Clustering for High Availability: Complete Setup Guide",
-    description:
-      "Master Redis clustering with sentinel configuration, failover strategies, and performance optimization for production workloads.",
-    thumbnail: "/placeholder.svg?height=240&width=400&text=Redis+Cluster",
-    category: "Database",
-    readTime: "12 min read",
-    publishDate: "2024-01-12",
-    slug: "redis-clustering-guide",
-  },
-  {
-    id: "3",
-    title: "AWS RDS Multi-AZ vs Read Replicas: When to Use What",
-    description:
-      "Deep dive into AWS RDS deployment options, comparing Multi-AZ deployments and Read Replicas for different use cases and performance requirements.",
-    thumbnail: "/placeholder.svg?height=240&width=400&text=AWS+RDS+Architecture",
-    category: "AWS",
-    readTime: "10 min read",
-    publishDate: "2024-01-10",
-    slug: "aws-rds-deployment-strategies",
-  },
-  {
-    id: "4",
-    title: "Infrastructure as Code: Terraform Best Practices",
-    description:
-      "Discover advanced Terraform patterns, state management strategies, and modular design principles for scalable infrastructure automation.",
-    thumbnail: "/placeholder.svg?height=240&width=400&text=Terraform+Code",
-    category: "Infrastructure",
-    readTime: "6 min read",
-    publishDate: "2024-01-08",
-    slug: "terraform-best-practices",
-  },
-  {
-    id: "5",
-    title: "PostgreSQL Performance Tuning: From Basics to Advanced",
-    description:
-      "Comprehensive guide to optimizing PostgreSQL performance including indexing strategies, query optimization, and configuration tuning.",
-    thumbnail: "/placeholder.svg?height=240&width=400&text=PostgreSQL+Performance",
-    category: "Database",
-    readTime: "15 min read",
-    publishDate: "2024-01-05",
-    slug: "postgresql-performance-tuning",
-  },
-  {
-    id: "6",
-    title: "Monitoring Microservices: From Metrics to Insights",
-    description:
-      "A comprehensive guide to implementing observability in microservices architectures using Prometheus, Grafana, and distributed tracing.",
-    thumbnail: "/placeholder.svg?height=240&width=400&text=Monitoring+Dashboard",
-    category: "Monitoring",
-    readTime: "10 min read",
-    publishDate: "2024-01-02",
-    slug: "monitoring-microservices",
-  },
-  {
-    id: "7",
-    title: "AWS Lambda Cold Starts: Optimization Strategies",
-    description:
-      "Learn how to minimize AWS Lambda cold start times with provisioned concurrency, runtime optimization, and architectural patterns.",
-    thumbnail: "/placeholder.svg?height=240&width=400&text=AWS+Lambda+Performance",
-    category: "AWS",
-    readTime: "8 min read",
-    publishDate: "2023-12-30",
-    slug: "aws-lambda-cold-start-optimization",
-  },
-  {
-    id: "8",
-    title: "CI/CD Pipeline Security: Protecting Your Deployments",
-    description:
-      "Essential security practices for CI/CD pipelines, including secret management, vulnerability scanning, and secure deployment strategies.",
-    thumbnail: "/placeholder.svg?height=240&width=400&text=Security+Pipeline",
-    category: "Security",
-    readTime: "7 min read",
-    publishDate: "2023-12-28",
-    slug: "cicd-security",
-  },
-  {
-    id: "9",
-    title: "Docker Multi-Stage Builds: Optimizing Container Images",
-    description:
-      "Master Docker multi-stage builds to create smaller, more secure container images while maintaining development flexibility.",
-    thumbnail: "/placeholder.svg?height=240&width=400&text=Docker+Optimization",
-    category: "Docker",
-    readTime: "5 min read",
-    publishDate: "2023-12-20",
-    slug: "docker-multi-stage-builds",
-  },
-]
-
-const categories = ["All", "Kubernetes", "Database", "AWS", "Infrastructure", "Monitoring", "Security", "Docker"]
+const categories = ["All", "Database", "Kubernetes", "Infrastructure", "Monitoring", "Security", "Docker", "AWS"]
 
 export default function BlogsPage() {
   return (
@@ -163,7 +49,7 @@ export default function BlogsPage() {
 
           {/* Blog posts grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {allBlogPosts.map((post, index) => (
+            {blogPosts.map((post, index) => (
               <Link key={post.id} href={`/blogs/${post.slug}`}>
                 <Card
                   className="group hover:shadow-lg transition-all duration-300 hover:scale-[1.02] cursor-pointer h-full"
