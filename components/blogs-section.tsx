@@ -67,44 +67,7 @@ const blogPosts: BlogPost[] = [
     title: "Docker Multi-Stage Builds: Optimizing Container Images",
     description:
       "Master Docker multi-stage builds to create smaller, more secure container images while maintaining development flexibility.",
-    thumbnail: "/placeholder.svg?height=240&width=400&text=Docker+Optimization",
-    category: "Docker",
-    readTime: "5 min read",
-    publishDate: "2023-12-20",
-    slug: "docker-multi-stage-builds",
-  },
-  {
-    id: "6",
-    title: "AWS Cost Optimization: Strategies That Actually Work",
-    description:
-      "Practical approaches to reducing AWS costs without compromising performance, including rightsizing, reserved instances, and automation.",
-    thumbnail: "/placeholder.svg?height=240&width=400&text=AWS+Cost+Optimization",
-    category: "Cloud",
-    readTime: "9 min read",
-    publishDate: "2023-12-15",
-    slug: "aws-cost-optimization",
-  },
-]
-    publishDate: "2024-01-02",
-    slug: "monitoring-microservices",
-  },
-  {
-    id: "4",
-    title: "CI/CD Pipeline Security: Protecting Your Deployments",
-    description:
-      "Essential security practices for CI/CD pipelines, including secret management, vulnerability scanning, and secure deployment strategies.",
-    thumbnail: "/placeholder.svg?height=240&width=400&text=Security+Pipeline",
-    category: "Security",
-    readTime: "7 min read",
-    publishDate: "2023-12-28",
-    slug: "cicd-security",
-  },
-  {
-    id: "5",
-    title: "Docker Multi-Stage Builds: Optimizing Container Images",
-    description:
-      "Master Docker multi-stage builds to create smaller, more secure container images while maintaining development flexibility.",
-    thumbnail: "/placeholder.svg?height=240&width=400&text=Docker+Optimization",
+    thumbnail: "https://images.unsplash.com/photo-1622737133809-d95047b9e673?w=400&h=240&fit=crop&crop=entropy&auto=format&q=80",
     category: "Docker",
     readTime: "5 min read",
     publishDate: "2023-12-20",
