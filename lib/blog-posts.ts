@@ -13,6 +13,31 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "3",
+    title: "Why Caddy is Your Production Setup's Best Friend: A DevOps Engineer's Perspective",
+    description:
+      "Discover how Caddy web server with automatic HTTPS, zero-downtime reloads, and Docker integration can transform your production infrastructure. From SSL nightmares to seamless deployments.",
+    thumbnail: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop&crop=entropy&auto=format&q=80",
+    category: "DevOps",
+    readTime: "10 min read",
+    publishDate: "2024-09-22",
+    slug: "caddy-production-setup-devops-guide",
+    author: "Shreegopal Dadhich",
+    featured: true,
+  },
+  {
+    id: "2",
+    title: "Docker Multi-Stage Builds: How We Cut Our Image Sizes by 80% and Saved $50K Annually",
+    description:
+      "From 2.3GB bloated containers to sleek 380MB production images - discover how ONE simple Dockerfile transformed our deployment pipeline and saved us $50K annually in infrastructure costs.",
+    thumbnail: "https://images.unsplash.com/photo-1622737133809-d95047b9e673?w=800&h=400&fit=crop&crop=entropy&auto=format&q=80",
+    category: "DevOps",
+    readTime: "12 min read",
+    publishDate: "2024-09-22",
+    slug: "docker-multistage-builds-cost-optimization",
+    author: "Shreegopal Dadhich",
+  },
+  {
     id: "1",
     title: "Setting Up Redis Cluster on AWS EC2 with Docker Compose: A Complete Guide",
     description:
@@ -23,6 +48,5 @@ export const blogPosts: BlogPost[] = [
     publishDate: "2025-01-15",
     slug: "redis-cluster-aws-setup",
     author: "Shreegopal Dadhich",
-    featured: true,
   },
 ]
