@@ -8,10 +8,12 @@ import { notFound } from "next/navigation"
 import { blogPosts } from "@/lib/blog-posts"
 import { RedisClusterAwsSetupContent } from "@/components/blog-posts/redis-cluster-aws-setup"
 import { DockerMultistageBuildsContent } from "@/components/blog-posts/docker-multistage-builds-cost-optimization"
+import { CaddyProductionSetupDevopsGuideContent } from "@/components/blog-posts/caddy-production-setup-devops-guide"
 
 const blogComponents: Record<string, () => JSX.Element> = {
   "redis-cluster-aws-setup": RedisClusterAwsSetupContent,
   "docker-multistage-builds-cost-optimization": DockerMultistageBuildsContent,
+  "caddy-production-setup-devops-guide": CaddyProductionSetupDevopsGuideContent,
 }
 
 interface BlogPageProps {
