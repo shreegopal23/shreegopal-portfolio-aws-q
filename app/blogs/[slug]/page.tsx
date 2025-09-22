@@ -7,9 +7,11 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { blogPosts } from "@/lib/blog-posts"
 import { RedisClusterAwsSetupContent } from "@/components/blog-posts/redis-cluster-aws-setup"
+import { DockerMultistageBuildsContent } from "@/components/blog-posts/docker-multistage-builds-cost-optimization"
 
 const blogComponents: Record<string, () => JSX.Element> = {
   "redis-cluster-aws-setup": RedisClusterAwsSetupContent,
+  "docker-multistage-builds-cost-optimization": DockerMultistageBuildsContent,
 }
 
 interface BlogPageProps {
