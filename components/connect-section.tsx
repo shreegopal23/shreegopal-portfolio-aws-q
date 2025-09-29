@@ -23,21 +23,32 @@ export function ConnectSection() {
     setIsSubmitting(true)
 
     try {
-      // Simulate form submission with realistic timing
-      await new Promise((resolve) => setTimeout(resolve, 1500))
-      setIsSubmitted(true)
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
 
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setIsSubmitted(false)
-        setFormData({ name: "", email: "", subject: "", message: "" })
-      }, 3000)
+      if (response.ok) {
+        setIsSubmitted(true)
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setIsSubmitted(false)
+          setFormData({ name: "", email: "", subject: "", message: "" })
+        }, 3000)
+      } else {
+        const errorData = await response.json()
+        throw new Error(errorData.error || 'Failed to send message')
+      }
     } catch (error) {
       console.error("Form submission error:", error)
+      alert('Failed to send message. Please try again or contact me directly.')
     } finally {
       setIsSubmitting(false)
     }
-  }, [])
+  }, [formData])
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -105,7 +116,7 @@ export function ConnectSection() {
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-balance">Let's Connect</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-balance">
-            I’m always open to meaningful discussions around Cloud, DevOps, and technology trends. Feel free to connect with me to exchange ideas or insights.
+            I'm always open to meaningful discussions around Cloud, DevOps, and technology trends. Feel free to connect with me to exchange ideas or insights.
           </p>
         </div>
 
