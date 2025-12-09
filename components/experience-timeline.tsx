@@ -17,7 +17,7 @@ const experiences: ExperienceItem[] = [
   {
     company: "Logicwind Technologies",
     role: "DevOps Engineer",
-    duration: "July 2025 - Present",
+    duration: "september 2024 - Present",
     location: "Surat, India",
     description:
       "Designing, deploying, and managing scalable, secure, and fault-tolerant cloud infrastructure for high-traffic applications with 10M+ active users.",
@@ -33,7 +33,7 @@ const experiences: ExperienceItem[] = [
   {
     company: "Toshal Infotech",
     role: "DevOps Intern",
-    duration: "2024",
+    duration: "2023 - 2024",
     location: "Surat, India",
     description:
       "Built cloud-native applications using AWS, Docker, and Kubernetes, showcasing expertise in containerization and orchestration.",
@@ -42,26 +42,30 @@ const experiences: ExperienceItem[] = [
       "Containerized Backend and database components using Docker",
       "Orchestrated deployment via Kubernetes for scalability",
       "Demonstrated cloud-native expertise for production-ready solutions",
-    ],
-    technologies: ["AWS", "Docker", "Kubernetes", "Git", "Linux", "Bash"],
-    logo: "/cloud-company-logo.png",
-  },
-  {
-    company: "Toshal Infotech",
-    role: "DevOps Intern",
-    duration: "2023",
-    location: "Surat, India",
-    description:
-      "Implemented resilient AWS infrastructure solutions focusing on high availability and failover systems.",
-    achievements: [
       "Implemented AWS-Powered Failover System using elastic load balancers",
       "Designed resilient infrastructure maintaining uninterrupted service availability",
       "Seamlessly transferred traffic from primary to backup systems during failures",
       "Enhanced system reliability ensuring continuous service operation",
     ],
-    technologies: ["AWS", "ELB", "EC2", "CloudWatch", "Terraform", "Docker"],
-    logo: "/startup-logo.png",
+    technologies: ["AWS", "ELB", "EC2", "CloudWatch", "Terraform", "Docker", "Kubernetes", "Git", "Linux", "Bash"],
+    logo: "/cloud-company-logo.png",
   },
+  // {
+  //   company: "Toshal Infotech",
+  //   role: "DevOps Intern",
+  //   duration: "2023",
+  //   location: "Surat, India",
+  //   description:
+  //     "Implemented resilient AWS infrastructure solutions focusing on high availability and failover systems.",
+  //   achievements: [
+  //     "Implemented AWS-Powered Failover System using elastic load balancers",
+  //     "Designed resilient infrastructure maintaining uninterrupted service availability",
+  //     "Seamlessly transferred traffic from primary to backup systems during failures",
+  //     "Enhanced system reliability ensuring continuous service operation",
+  //   ],
+  //   technologies: ["AWS", "ELB", "EC2", "CloudWatch", "Terraform", "Docker"],
+  //   logo: "/startup-logo.png",
+  // },
 ]
 
 export function ExperienceTimeline() {
