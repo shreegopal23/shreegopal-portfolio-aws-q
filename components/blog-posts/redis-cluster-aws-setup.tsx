@@ -43,7 +43,7 @@ export function RedisClusterAwsSetupContent() {
       </p>
 
       <div className="my-8 text-center">
-        <svg width="800" height="400" xmlns="http://www.w3.org/2000/svg" className="max-w-full h-auto mx-auto">
+        <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" className="w-full max-w-4xl h-auto mx-auto">
           <defs>
             <linearGradient id="awsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" style={{stopColor:"#FF9900", stopOpacity:1}} />
