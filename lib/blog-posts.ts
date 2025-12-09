@@ -13,6 +13,19 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "4",
+    title: "Kubernetes Single-Node Cluster Setup on Ubuntu: A Complete Guide",
+    description:
+      "A comprehensive step-by-step guide to install and configure a production-ready Kubernetes single-node cluster using kubeadm, kubelet, and kubectl on Ubuntu Server. Perfect for learning, development, and testing environments.",
+    thumbnail: "/images/K8s-thumbnail.jpeg",
+    category: "Kubernetes",
+    readTime: "18 min read",
+    publishDate: "2025-12-09",
+    slug: "kubernetes-single-node-cluster-setup",
+    author: "Shreegopal Dadhich",
+    featured: true,
+  },
+  {
     id: "3",
     title: "Why Caddy is Your Production Setup's Best Friend: A DevOps Engineer's Perspective",
     description:
@@ -23,7 +36,6 @@ export const blogPosts: BlogPost[] = [
     publishDate: "2024-09-22",
     slug: "caddy-production-setup-devops-guide",
     author: "Shreegopal Dadhich",
-    featured: true,
   },
   {
     id: "2",

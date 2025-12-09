@@ -9,11 +9,13 @@ import { blogPosts } from "@/lib/blog-posts"
 import { RedisClusterAwsSetupContent } from "@/components/blog-posts/redis-cluster-aws-setup"
 import { DockerMultistageBuildsContent } from "@/components/blog-posts/docker-multistage-builds-cost-optimization"
 import { CaddyProductionSetupDevopsGuideContent } from "@/components/blog-posts/caddy-production-setup-devops-guide"
+import { KubernetesSingleNodeClusterSetupContent } from "@/components/blog-posts/kubernetes-single-node-cluster-setup"
 
 const blogComponents: Record<string, () => JSX.Element> = {
   "redis-cluster-aws-setup": RedisClusterAwsSetupContent,
   "docker-multistage-builds-cost-optimization": DockerMultistageBuildsContent,
   "caddy-production-setup-devops-guide": CaddyProductionSetupDevopsGuideContent,
+  "kubernetes-single-node-cluster-setup": KubernetesSingleNodeClusterSetupContent,
 }
 
 interface BlogPageProps {
