@@ -13,6 +13,19 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "5",
+    title: "Building a Centralized Logging System with EFK Stack (Elasticsearch, Fluent Bit, Kibana)",
+    description:
+      "Learn how to build a production-ready centralized logging system using the EFK Stack with Docker Compose. Complete guide to aggregate, search, and visualize logs from multiple Docker containers in real-time with Elasticsearch, Fluent Bit, and Kibana.",
+    thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop&crop=entropy&auto=format&q=80",
+    category: "DevOps",
+    readTime: "20 min read",
+    publishDate: "2026-01-11",
+    slug: "efk-stack-centralized-logging-docker",
+    author: "Shreegopal Dadhich",
+    featured: true,
+  },
+  {
     id: "4",
     title: "Kubernetes Single-Node Cluster Setup on Ubuntu: A Complete Guide",
     description:
