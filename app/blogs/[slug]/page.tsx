@@ -10,12 +10,14 @@ import { RedisClusterAwsSetupContent } from "@/components/blog-posts/redis-clust
 import { DockerMultistageBuildsContent } from "@/components/blog-posts/docker-multistage-builds-cost-optimization"
 import { CaddyProductionSetupDevopsGuideContent } from "@/components/blog-posts/caddy-production-setup-devops-guide"
 import { KubernetesSingleNodeClusterSetupContent } from "@/components/blog-posts/kubernetes-single-node-cluster-setup"
+import { EfkStackCentralizedLoggingDockerContent } from "@/components/blog-posts/efk-stack-centralized-logging-docker"
 
 const blogComponents: Record<string, () => JSX.Element> = {
   "redis-cluster-aws-setup": RedisClusterAwsSetupContent,
   "docker-multistage-builds-cost-optimization": DockerMultistageBuildsContent,
   "caddy-production-setup-devops-guide": CaddyProductionSetupDevopsGuideContent,
   "kubernetes-single-node-cluster-setup": KubernetesSingleNodeClusterSetupContent,
+  "efk-stack-centralized-logging-docker": EfkStackCentralizedLoggingDockerContent,
 }
 
 interface BlogPageProps {
