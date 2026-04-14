@@ -11,6 +11,7 @@ import { DockerMultistageBuildsContent } from "@/components/blog-posts/docker-mu
 import { CaddyProductionSetupDevopsGuideContent } from "@/components/blog-posts/caddy-production-setup-devops-guide"
 import { KubernetesSingleNodeClusterSetupContent } from "@/components/blog-posts/kubernetes-single-node-cluster-setup"
 import { EfkStackCentralizedLoggingDockerContent } from "@/components/blog-posts/efk-stack-centralized-logging-docker"
+import { ModularTerraformAWSInfrastructureContent } from "@/components/blog-posts/modular-terraform-aws-infrastructure"
 
 const blogComponents: Record<string, () => JSX.Element> = {
   "redis-cluster-aws-setup": RedisClusterAwsSetupContent,
@@ -18,6 +19,7 @@ const blogComponents: Record<string, () => JSX.Element> = {
   "caddy-production-setup-devops-guide": CaddyProductionSetupDevopsGuideContent,
   "kubernetes-single-node-cluster-setup": KubernetesSingleNodeClusterSetupContent,
   "efk-stack-centralized-logging-docker": EfkStackCentralizedLoggingDockerContent,
+  "modular-terraform-aws-infrastructure": ModularTerraformAWSInfrastructureContent,
 }
 
 interface BlogPageProps {
