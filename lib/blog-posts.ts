@@ -13,6 +13,19 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "6",
+    title: "Cross-Account ECR to ECS: A Practical Setup Guide for Multi-Account AWS Deployments",
+    description:
+      "A step-by-step guide to pushing Docker images to ECR in one AWS account and pulling them from ECS in another. Covers repository policies, IAM execution roles, task definition configuration, and the most common causes of CannotPullContainerError.",
+    thumbnail: "/images/ecr-cross-account-thumbnail.svg",
+    category: "AWS",
+    readTime: "14 min read",
+    publishDate: "2026-04-28",
+    slug: "ecr-cross-account-ecs-deployment-sop",
+    author: "Shreegopal Dadhich",
+    featured: true,
+  },
+  {
     id: "5",
     title: "Building a Centralized Logging System with EFK Stack (Elasticsearch, Fluent Bit, Kibana)",
     description:

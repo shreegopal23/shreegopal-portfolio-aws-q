@@ -1,0 +1,70 @@
+<svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="ecrGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9900;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EC7211;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="ecsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1D4ED8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="iamGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <marker id="arrowAccB" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1D4ED8" />
+    </marker>
+  </defs>
+
+  <rect width="900" height="480" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2" rx="10" />
+  <text x="450" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1e293b">
+    Cross-Account ECR &#8594; ECS Image Pull
+  </text>
+
+  <rect x="40" y="70" width="380" height="370" fill="none" stroke="#EC7211" stroke-width="2" stroke-dasharray="6,4" rx="12" />
+  <text x="60" y="95" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#EC7211">
+    AWS Account A &#8212; ECR Owner
+  </text>
+
+  <rect x="80" y="120" width="300" height="80" fill="url(#ecrGradient)" stroke="#EC7211" stroke-width="2" rx="8" />
+  <text x="230" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">ECR Repository</text>
+  <text x="230" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">appsonair/your-repo-name</text>
+  <text x="230" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">Image tag: latest</text>
+
+  <rect x="80" y="220" width="300" height="100" fill="white" stroke="#EC7211" stroke-width="1.5" rx="8" />
+  <text x="230" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1e293b">Repository Policy (Resource-Based)</text>
+  <text x="230" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#475569">Principal: Account B root</text>
+  <text x="230" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#475569">ecr:GetDownloadUrlForLayer</text>
+  <text x="230" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#475569">ecr:BatchGetImage</text>
+
+  <rect x="80" y="340" width="300" height="80" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" rx="8" />
+  <text x="230" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#92400e">DevOps pushes image</text>
+  <text x="230" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#92400e">aws ecr get-login-password</text>
+  <text x="230" y="402" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#92400e">docker build / tag / push</text>
+
+  <rect x="480" y="70" width="380" height="370" fill="none" stroke="#1D4ED8" stroke-width="2" stroke-dasharray="6,4" rx="12" />
+  <text x="500" y="95" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1D4ED8">
+    AWS Account B &#8212; ECS Consumer
+  </text>
+
+  <rect x="520" y="120" width="300" height="80" fill="url(#iamGradient)" stroke="#059669" stroke-width="2" rx="8" />
+  <text x="670" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Task Execution Role</text>
+  <text x="670" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">ecr:GetAuthorizationToken</text>
+  <text x="670" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">ecr:BatchGetImage / Layer</text>
+
+  <rect x="520" y="220" width="300" height="100" fill="url(#ecsGradient)" stroke="#1D4ED8" stroke-width="2" rx="8" />
+  <text x="670" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">ECS Task Definition</text>
+  <text x="670" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">image: ACCT-A.dkr.ecr...</text>
+  <text x="670" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">logDriver: awslogs</text>
+  <text x="670" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">no repositoryCredentials</text>
+
+  <rect x="520" y="340" width="300" height="80" fill="white" stroke="#1D4ED8" stroke-width="1.5" rx="8" />
+  <text x="670" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1e293b">ECS Service</text>
+  <text x="670" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#475569">Cluster + running task</text>
+  <text x="670" y="402" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#475569">CloudWatch Logs: /ecs/&lt;svc&gt;</text>
+
+  <line x1="380" y1="160" x2="520" y2="260" stroke="#1D4ED8" stroke-width="2.5" marker-end="url(#arrowAccB)" />
+  <text x="450" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1D4ED8">Pull image (HTTPS)</text>
+  <text x="450" y="216" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1D4ED8">via ECR endpoint</text>
+</svg>
