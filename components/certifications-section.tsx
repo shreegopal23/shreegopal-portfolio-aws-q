@@ -38,10 +38,10 @@ export function CertificationsSection() {
           <div className="group/cert">
             <Badge
               variant="outline"
-              className="px-5 py-2 text-sm font-medium border-border/50 text-muted-foreground/60 border-dashed cursor-default"
+              className="px-5 py-2 text-sm font-medium border-border/50 text-foreground/90 hover:bg-gradient-to-r hover:from-primary/10 hover:to-secondary/10 hover:border-primary/30 hover:text-primary transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer"
             >
-              <Award className="w-4 h-4 mr-2" />
-              AWS Solutions Architect (In Progress)
+              <Award className="w-4 h-4 mr-2 group-hover/cert:text-primary transition-colors duration-200" />
+              AWS Solutions Architect
             </Badge>
           </div>
         </div>
